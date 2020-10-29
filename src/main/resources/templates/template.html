@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+				 
+<head>
+	<meta charset="UTF-8"/>
+	<title>Banque</title>
+    <link href="/webjars/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css"
+    th:href="@{/css/bootstrap.min.css}">
+</head>
+<body>
+ 	<div class="row col-lg-12 mt-3">
+ 		<header class=" col-lg-12" >
+        		<nav class="navbar navbar-expand-sm bg-info navbar-dark navbar-fixed-top">
+          			<a class="navbar-brand col-lg-4" href="#">Logo</a>
+          			<h3 class="col-lg-5">Banque du peuple </h3>
+			         <form class="form-inline" action="#">
+			            <input class="form-control mr-sm-2" type="text" placeholder="Search">
+			            <button class="btn btn-info" type="btn">Ok</button>
+			         </form>
+        		</nav>
+		</header>
+		<section class="col-lg-3" id="left" style="margin-top: 20px;">
+	        <div class="card">
+	            <div class="card-body row">
+	                <img src="@{/image/Profil.jpg}" class="img-responsive rounded-circle col-lg-5" alt="Profil">
+	                <div class="col-lg-7">
+	                  <h6 class="card-title">Moussa DIENE</h6>
+	                  <p class="card-text"><i> Responsable</i>.</p>
+	                                  <a href="https://github.com/moussadiene" class="btn btn-info btn-block"  target="_blank">profil</a>
+	                </div>
+	            </div>
+	        </div>
+
+	        <div class="card col-12 bg-info" style="margin-top: 20px;">
+	          <div class="card-body">
+	            <nav class="navbar navbar-dark bg-info col-lg-12">
+	              <ul class="navbar-nav col-lg-12">
+	                  <li class="nav-item dash active ">
+	                      <a class="nav-link" th:href="@{/comptes}"><span class="fa fa-home"></span> &ThinSpace;&ThinSpace; Dashboad</a>
+	                  </li>
+	                  <li class="nav-item client">
+	                      <!-- <a class="nav-link" href="#" id="ok"><span class="fa fa-user"></span> &ThinSpace;&ThinSpace;Gestion Client</a> -->
+	                      <a class="nav-link" th:href="@{/client}"><span class="fa fa-user"></span> &ThinSpace;&ThinSpace;Gestion Client</a>
+	                  </li>
+	                  <li class="nav-item Entreprise">
+	                      <a class="nav-link" th:href="@{/comptes}"><i class="fas fa-briefcase"></i> &ThinSpace;&ThinSpace;Gestion Entreprise</a>
+	                  </li>
+	                  <li class="nav-item compte">
+	                      <a class="nav-link" th:href="@{/comptes}"><i class="fas fa-briefcase"></i> &ThinSpace;&ThinSpace;Gestion Compte</a>
+	                  </li>
+	                  <li class="nav-item compte">
+	                      <a class="nav-link" th:href="@{/login?logout}"><i class="fas fa-briefcase"></i> &ThinSpace;&ThinSpace;Deconnecter</a>
+	                  </li>
+	              </ul>
+	            </nav>
+	          </div>
+	        </div>
+      	</section>
+		<section layout:fragment="content" style="margin-top:20px" class="col-lg-9" id="contain">
+			test
+		</section>
+		<footer class="mt-5  col-12">
+			<div class="navbar-fixed-top ">@ mabanque.sn </div>
+		</footer>
+	</div>
+</body>
+</html>
